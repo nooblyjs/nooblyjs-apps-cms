@@ -1,0 +1,12 @@
+{
+  "administrator": {
+    "id": "g1kypuv1zmhafo03w",
+    "username": "administrator",
+    "email": "admin@localhost",
+    "password": "b3a99e2209d8363bbfab9b8e99c0ceec05100b65cffb689e4a9835fb3dc16fcb",
+    "role": "admin",
+    "createdAt": "2025-10-28T10:38:05.726Z",
+    "lastLogin": null,
+    "isActive": true
+  }
+}

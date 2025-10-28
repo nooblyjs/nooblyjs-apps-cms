@@ -1,7 +1,7 @@
 {
   "name": "nooblyjs-apps-cms",
   "version": "1.0.0",
-  "description": "This repository holds the code for a micro-service that exposes a CMS application using the Nooblyjs framework",
+  "description": "A full-featured CMS platform built with Nooblyjs-core, Express, and Bootstrap 5",
   "homepage": "https://github.com/nooblyjs/nooblyjs-apps-cms#readme",
   "bugs": {
     "url": "https://github.com/nooblyjs/nooblyjs-apps-cms/issues"
@@ -15,9 +15,24 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:web": "node index.js",
+    "kill": "  kill -9 $(lsof -t -i:3004)"
   },
   "dependencies": {
-    "nooblyjs-core": "^1.0.9"
+    "nooblyjs-core": "^1.0.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.9",
+    "uuid": "^9.0.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

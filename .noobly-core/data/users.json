@@ -1,0 +1,20 @@
+{
+  "860bf7ed-82c3-42e7-a2c2-cfc4f8e51332": {
+    "id": "68b71874-f9cb-4344-a0d1-573001a7c8db",
+    "username": "stephenrbooysen@gmail.com",
+    "email": "stephenrbooysen@gmail.com",
+    "passwordHash": "$2b$10$yTVvsGOcqrWHVNtz7D3OJ.8galc5VCTgYiFNIrRd1scpnLI6zTVaK",
+    "createdAt": "2025-10-28T10:39:19.433Z",
+    "role": "user",
+    "sites": []
+  },
+  "ad7fc025-f696-4e26-941e-1751610deb44": {
+    "id": "c07f25b6-33f6-4dfa-863c-75db4849fdcf",
+    "username": "testuser",
+    "email": "test@example.com",
+    "passwordHash": "$2b$10$ZfsQ6xRvuwCtu2/NRO7yIuB1PUwxUA.DqzpktJ.o.7cBGlRGWrS5C",
+    "createdAt": "2025-10-28T10:45:39.095Z",
+    "role": "user",
+    "sites": []
+  }
+}

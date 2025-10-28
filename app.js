@@ -53,7 +53,7 @@ const workflow = serviceRegistry.workflow('memory');
 const authservice = serviceRegistry.authservice('file');
 
 // Initiate the content Registry
-const wiki = require('nooblyjs-app-wiki');
+const cmd = require('.');
 wiki(app, server, eventEmitter, serviceRegistry, options);
 
 // Initiate the content Registry
@@ -63,6 +63,6 @@ wiki(app, server, eventEmitter, serviceRegistry, options);
 // Launch the application manager
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(process.env.PORT || 3003, () => {
+app.listen(process.env.PORT || 3004, () => {
   log.info(`Nooblyjs Content Server running on port ${process.env.PORT || 3003}`);
 });
