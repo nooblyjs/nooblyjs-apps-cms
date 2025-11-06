@@ -15,7 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev:web": "node index.js",
+    "dev:web": "node app.js",
     "kill": "  kill -9 $(lsof -t -i:3004)"
   },
   "dependencies": {

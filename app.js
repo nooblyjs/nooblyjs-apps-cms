@@ -52,16 +52,18 @@ const workflow = serviceRegistry.workflow('memory');
 // instantiate an auth service
 const authservice = serviceRegistry.authservice('file');
 
-// Initiate the content Registry
-const cmd = require('.');
-wiki(app, server, eventEmitter, serviceRegistry, options);
-
-// Initiate the content Registry
-//const blog = require('nooblyjs-apps-blog');
-//blog(app,eventEmitter,serviceRegistry)
+// Initiate the CMS
+const cms = require('.');
+cms(app, server, eventEmitter, serviceRegistry, options);
 
 // Launch the application manager
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Launch the application docs folder
+app.use('/docs', express.static(path.join(__dirname, 'docs')));
+
+// Launch the application docs folder
+app.use('/readme', express.static(path.join(__dirname, 'README.md')));
 
 app.listen(process.env.PORT || 3004, () => {
   log.info(`Nooblyjs Content Server running on port ${process.env.PORT || 3003}`);
