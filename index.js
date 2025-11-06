@@ -9,9 +9,6 @@
 
 'use strict';
 
-const Routes = require('./src/routes');
-const Views = require('./src/views');
-
 /**
  * Creates the CMS service
  * Automatically configures routes and views for the cms service.
@@ -23,27 +20,9 @@ const Views = require('./src/views');
  * @return {void}
  */
 module.exports = (app, server, eventEmitter, serviceRegistry, options) => {
-  
-  const express = require('express');
-  const path = require('path');
- 
-  const logger = serviceRegistry.logger();  
-  const cache = serviceRegistry.cache();
-  const queue = serviceRegistry.queue();
-  const filing = serviceRegistry.filing();
-  const dataService = serviceRegistry.dataService();
-  const search = serviceRegistry.searching();
-  const measuring = serviceRegistry.measuring();
-  const authService = serviceRegistry.authservice();
 
-  // Create the middleware
-  const servicesAuthMiddleware = serviceRegistry.servicesAuthMiddleware || ((req, res, next) => next());
-
-  // Register routes and views
-  options.app = app
-
-  Routes(options, eventEmitter, serviceRegistry);
-  Views(options, eventEmitter, serviceRegistry);
+  // Launch the app service
+  const appService = serviceRegistry.appservice();
 
   // Serve README.md from root directory
   app.get('/applications/blog/README.md', (req, res) => {
